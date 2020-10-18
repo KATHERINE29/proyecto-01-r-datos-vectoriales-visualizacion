@@ -139,9 +139,8 @@ asia_ev = asia_paises[asia_paises$lifeExp >= "80", ]
 ggplot(asia_ev, aes(name_long, lifeExp)) + 
   ggtitle("Esperanza de vida en Asia mayor o igual a 80 años") +
   xlab("País") + 
-  ylab("Esperanza de vida") +  
-    geom_col() 
-   
+  ylab("Esperanza de vida") +   
+    geom_col(aes(y=lifeExp), color = c("blue"))
 ```
 
 ### Ejercicio 7 (20%)
@@ -186,5 +185,5 @@ plot(paises_suramerica["area_km2"], main="Países Suramérica por área mayor a 
 
 #Mapa de coropletas para países de Suramérica con área mayor a 2.5 km2
 
-plot(paises_suramerica["pop"], main="Países Suramérica con población de al menos 40 millones de personas")
+plot(paises_suramerica["pop"], main="Países Suramérica con una población de 40 millones o más")
 ```
